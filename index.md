@@ -12,8 +12,7 @@ permalink: /
 - [x] Figure out search function
 - [ ] ~~Include a table of contents~~ (side bar nav will suffice with search)
 - [ ] Demonstrate the edit cycle
-- [ ] Add semantic versioning and document the triggers
-- [ ] Create a pdf render of the documents
-- [ ] Email/Webhook notifications when minor or major version is incremented
+- [ ] Add semantic versioning and document the triggers (semantic-release package github CI integration)
+- [ ] Create a pdf render of the documents (potentially will require separate code)
 - [ ] Document the 'student' facing features in About 
 - [ ] Document the contribution guidelines in readme.md
