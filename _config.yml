@@ -1,4 +1,5 @@
 title: 72(F) Sqn Courseware
+description: A demonstration site for how git can be used to host courseware.
 baseurl: "/texan_courseware" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
