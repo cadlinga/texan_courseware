@@ -3,7 +3,6 @@ layout: default
 title: Flying Phase
 nav_order: 2000
 has_children: true
-permalink: /flying/index
 ---
 
 # Flying Phase

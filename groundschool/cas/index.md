@@ -4,7 +4,6 @@ title: Crew Alerting System (CAS)
 nav_order: 2000
 has_children: true
 parent: Ground School
-permalink: /groundschool/cas/index
 ---
 
 # Crew Alerting System

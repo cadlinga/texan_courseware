@@ -4,7 +4,6 @@ title: Electrical System
 nav_order: 1000
 has_children: true
 parent: Ground School
-permalink: /groundschool/electrical/index
 ---
 
 # Electrical System

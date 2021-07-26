@@ -4,7 +4,6 @@ title: Generator
 nav_order: 3
 grand_parent: Ground School
 parent: Electrical System
-permalink: /groundschool/electrical/generator
 ---
 
 # Generator

@@ -4,7 +4,6 @@ title: Sickness
 nav_order: 2
 grand_parent: Flying Phase
 parent: Preparation For Flight 
-permalink: /flying/preparation/sickness
 ---
 
 # Sickness

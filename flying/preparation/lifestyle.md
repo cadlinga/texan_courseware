@@ -4,7 +4,6 @@ title: Lifestyle
 nav_order: 1
 grand_parent: Flying Phase
 parent: Preparation For Flight 
-permalink: /flying/preparation/lifestyle
 ---
 
 # Lifestyle

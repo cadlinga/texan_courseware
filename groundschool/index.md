@@ -3,7 +3,6 @@ layout: default
 title: Ground School
 nav_order: 1000
 has_children: true
-permalink: /groundschool/index
 ---
 
 # Ground School

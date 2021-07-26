@@ -4,7 +4,6 @@ title: Preparation For Flight
 nav_order: 1000
 has_children: true
 parent: Flying Phase
-permalink: /flying/preparation/index
 ---
 
 # Preparation For Flight
