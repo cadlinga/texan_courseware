@@ -9,5 +9,5 @@ permalink: /groundschool/electrical/battery
 
 # Battery
 
-The main bat is a battery. 
+The main bat is a battery. Its the main one. It has electricity. 
 
