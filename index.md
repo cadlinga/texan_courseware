@@ -10,7 +10,7 @@ permalink: /
 - [x] Create demo repository
 - [x] Render markdown documents using a Jekyll theme
 - [x] Figure out search function
-- [ ] Include a table of contents
+- [ ] ~~Include a table of contents~~ (side bar nav will suffice with search)
 - [ ] Demonstrate the edit cycle
 - [ ] Add semantic versioning and document the triggers
 - [ ] Create a pdf render of the documents
