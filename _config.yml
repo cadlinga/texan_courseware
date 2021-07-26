@@ -23,7 +23,7 @@ title: 72(F) Sqn Courseware
 #description: >- # this means to ignore newlines until "baseurl:"
 #  A public repository for demonstrating the potential use of git as a source control tool
 #  for courseware.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/texan_courseware" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: 
 #github_username:  jekyll
