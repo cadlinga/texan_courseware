@@ -32,3 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Check if pip is installed
         run: pip -V
+        
+      - name: Check if pandoc is installed
+        run: pandoc -v
