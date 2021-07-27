@@ -6,7 +6,7 @@ grand_parent: Ground School
 parent: Electrical System
 ---
 
-# Generator
+## Generator
 
 The generator is referred to as the GEN. 
 

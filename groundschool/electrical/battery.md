@@ -6,7 +6,7 @@ grand_parent: Ground School
 parent: Electrical System
 ---
 
-# Battery
+## Battery
 
 The main bat is a battery. Its the main one. It has electricity. 
 

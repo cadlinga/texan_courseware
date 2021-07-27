@@ -6,7 +6,7 @@ grand_parent: Ground School
 parent: Crew Alerting System (CAS)
 ---
 
-# Controls and Indications
+## Controls and Indications
 
 The controls and indications of the CAS. 
 

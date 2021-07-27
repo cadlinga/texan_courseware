@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Auxillary Battery
-nav_order: 1
+nav_order: 5
 grand_parent: Ground School
 parent: Electrical System
 ---
 
-# Auxillary Battery
+## Auxillary Battery
 
 The aux bat is an aux bat. 
 
