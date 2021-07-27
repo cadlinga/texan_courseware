@@ -36,6 +36,7 @@ jobs:
         
       - run: |	
           mkdir -p ${{ github.workspace }}/artifact
+          mv ${{ github.workspace }}/groundschool/book.pdf ${{ github.workspace }}/artifact/book.pdf
           echo hello > ${{ github.workspace }}/artifact/world.txt
         
       - uses: actions/upload-artifact@v2
