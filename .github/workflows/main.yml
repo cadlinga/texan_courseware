@@ -31,9 +31,11 @@ jobs:
       - name: Create PDF 
         run: python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c 
         
+      - name: Check for PDF
+        run: cd $GITHUB_WORKSPACE'/groundschool' && ls -a
+        
       - uses: actions/upload-artifact@master
         with:
-         name: flying_section
+         name: groundschool_section
          path: $GITHUB_WORKSPACE'/groundschool/book.pdf'
-         target: flying_sectiont 
         
