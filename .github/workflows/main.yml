@@ -25,13 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
       - name: Check is python is installed
         run: python3 --version
 
-      # Runs a set of commands using the runners shell
       - name: Check if pip is installed
         run: pip -V
         
       - name: Check if pandoc is installed
-        run: pandoc -v
+        run: sudo apt install pandoc && sudo apt install texlive-latex-base
