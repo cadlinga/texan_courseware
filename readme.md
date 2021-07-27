@@ -1,5 +1,6 @@
 # 72(F) Docs Readme
 
+# [Docs Here](https://cadlinga.github.io/texan_courseware/)
 
 ## Contributing 
 
