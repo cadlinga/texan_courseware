@@ -25,8 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         
-      - name: Check if pandoc is installed
-        run: sudo apt install pandoc && sudo apt install texlive-latex-base
+      - name: Install frontmatter, pandoc and LaTeX
+        run: sudo pip install python-frontmatter && sudo apt install pandoc && sudo apt install texlive-latex-base
         
       - name: Create PDF 
         run: python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c 
