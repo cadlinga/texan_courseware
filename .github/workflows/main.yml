@@ -34,8 +34,8 @@ jobs:
       - name: Check for PDF
         run: cd $GITHUB_WORKSPACE'/groundschool' && ls -a
         
-      - uses: actions/upload-artifact@master
+      - uses: actions/upload-artifact@v2
         with:
-         name: groundschool_section
-         path: ${{ github.workspace }}/groundschool/*.pdf'
+         name: groundschool
+         path: ${{ github.workspace }}/groundschool/**/*'
         
