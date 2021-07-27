@@ -26,10 +26,9 @@ jobs:
       - uses: actions/checkout@v2
         
       - name: Check if pandoc is installed
-        run: cd $GITHUB_WORKSPACE && ls -a
-        # run: sudo apt install pandoc && sudo apt install texlive-latex-base
+        run: sudo apt install pandoc && sudo apt install texlive-latex-base
         
-      # - name: Create PDF 
-        # run: python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c 
+      - name: Create PDF 
+        run: python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c 
         
         
