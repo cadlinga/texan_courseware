@@ -29,7 +29,7 @@ jobs:
         run: cd $GITHUB_WORKSPACE && ls -a
         # run: sudo apt install pandoc && sudo apt install texlive-latex-base
         
-      - name: Create PDF 
+      # - name: Create PDF 
         # run: python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c 
         
         
