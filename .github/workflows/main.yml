@@ -24,17 +24,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Checkout echo
-        run: echo $GITHUB_WORKSPACE
 
-      # - name: Check is python is installed
-      #  run: python3 --version
+      - name: Check is python is installed
+        run: python3 --version
 
-      # - name: Check if pip is installed
-      #  run: pip -V
+      - name: Check if pip is installed
+        run: pip -V
         
-      # - name: Check if pandoc is installed
-      #  run: sudo apt install pandoc && sudo apt install texlive-latex-base
+      - name: Check if pandoc is installed
+        run: sudo apt install pandoc && sudo apt install texlive-latex-base
+        
+      - name: Create PDF 
+        run: cd $GITHUB_WORKSPACE && python3 export_book.py -p $GITHUB_WORKSPACE'groundschool' -c 
         
         
