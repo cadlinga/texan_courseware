@@ -37,5 +37,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
          name: groundschool
-         path: ${{ github.workspace }}/**/*.pdf'
+         path: ${{ github.workspace }}/groundschool/book.pdf'
         
