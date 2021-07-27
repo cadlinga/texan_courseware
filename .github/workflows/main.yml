@@ -32,7 +32,7 @@ jobs:
         run: python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c 
         
       - name: Check for PDF
-        run: cd $GITHUB_WORKSPACE'/groundschool' && ls -a
+        run: cd ${{ github.workspace }}/groundschool && ls -a
         
       - uses: actions/upload-artifact@v2
         with:
