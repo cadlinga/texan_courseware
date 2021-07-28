@@ -28,6 +28,12 @@ jobs:
       - name: Install frontmatter, pandoc and LaTeX
         run: sudo pip install python-frontmatter && sudo apt install pandoc && sudo apt-get install texlive-xetex
         
+      - name: Check for the versions
+        run: |
+            pandoc -v
+            python3 --version 
+            pip -V
+        
       - name: Create PDF 
         run: | 
             python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c
