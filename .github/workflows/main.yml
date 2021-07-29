@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: generate_version_number
     outputs:
-      version: ${{ needs.generate_version_number.output.version }}
+      version: ${{ needs.generate_version_number.outputs.version }}
     steps:
       - uses: actions/checkout@v2
       - name: Install frontmatter, pandoc and LaTeX
@@ -103,7 +103,7 @@ jobs:
           # Optional converting Markdown to HTML (set content_type to text/html too):
           # convert_markdown: true
           # Optional attachments:
-          attachments: ${{ github.workspace }}/artifact/*.pdf
+          attachments: artifacts/**/*.pdf
           # Optional priority: 'high', 'normal' (default) or 'low'
           priority: normal
    
