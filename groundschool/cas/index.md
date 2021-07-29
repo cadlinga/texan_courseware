@@ -8,4 +8,5 @@ parent: Ground School
 
 # Crew Alerting System
 
-The electrical supply system is made up of a three major components, the battery, the generator and the auxillary battery. 
+The crew alerting system is super great.
+
