@@ -96,15 +96,7 @@ jobs:
       name: Release
       runs-on: ubuntu-latest
       steps:
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: v0.4.3
-          tag_name: v0.4.3
-#          draft: true
-#           files: |
-#             ${{ github.workspace }}/artifact/groundschool.pdf
-#             ${{ github.workspace }}/artifact/flying.pdf
+     
       - name: Checkout 
         uses: actions/checkout@v2
         with: 
@@ -131,4 +123,14 @@ jobs:
           # short_tags: true
           # If this is set to true, *every* commit will be treated as a new version.
           bump_each_commit: false
+          run: echo $version
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: $version
+          tag_name: $version
+#          draft: true
+#           files: |
+#             ${{ github.workspace }}/artifact/groundschool.pdf
+#             ${{ github.workspace }}/artifact/flying.pdf
 
