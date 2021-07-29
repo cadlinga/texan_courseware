@@ -86,6 +86,7 @@ jobs:
   release:
 
       name: Release
+      needs: create_and_send
       runs-on: ubuntu-latest
       steps:
      
