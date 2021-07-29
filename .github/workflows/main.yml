@@ -80,6 +80,9 @@ jobs:
     needs: generate_version_number
     steps:
     
+    - name: Echo out the version number
+      run: echo ${{ needs.generate_version_number.outputs.version }}
+    
     - uses: actions/download-artifact@v2
       with:
         path: artifacts/
@@ -88,6 +91,6 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         name: ${{ needs.generate_version_number.output.version }}
-        tag_name: ${{ needs.generate_version_number.output.version }}
+        tag_name: ${{ needs.generate_version_number.outputs.version }}
         # files: artifacts/*.pdf
     
