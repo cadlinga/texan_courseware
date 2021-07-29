@@ -105,6 +105,10 @@ jobs:
 #           files: |
 #             ${{ github.workspace }}/artifact/groundschool.pdf
 #             ${{ github.workspace }}/artifact/flying.pdf
+      - name: Checkout 
+        uses: actions/checkout@v2
+        with: 
+          fetch-depth: 0
       - name: Version
         uses: paulhatch/semantic-version@v4.0.2
         with:
