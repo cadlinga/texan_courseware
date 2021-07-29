@@ -72,7 +72,7 @@ jobs:
           # Required sender full name (address can be skipped):
           from: 72(F) Sqn
           # Optional whether this connection use TLS (default is true if server_port is 465)
-          secure: true
+          # secure: true
           # Optional plain body:
           body: A new set of courseware has been released.
           # Optional HTML body read from file:
@@ -84,7 +84,7 @@ jobs:
           # Optional recipient of the email response:
           # reply_to: luke@example.com
           # Optional unsigned/invalid certificates allowance:
-          ignore_cert: true
+          # ignore_cert: true
           # Optional converting Markdown to HTML (set content_type to text/html too):
           # convert_markdown: true
           # Optional attachments:
