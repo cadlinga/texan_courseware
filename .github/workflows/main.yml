@@ -21,6 +21,7 @@ jobs:
 
   create_and_send: 
     runs-on: ubuntu-latest
+    needs: quality_check
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
