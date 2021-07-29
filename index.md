@@ -9,10 +9,10 @@ nav_order: 1
 - [x] Create demo repository
 - [x] Render markdown documents using a Jekyll theme
 - [x] Figure out search function
-- [ ] ~~Include a table of contents~~ (side bar nav will suffice with search)
+- [x] ~~Include a table of contents~~ (side bar nav will suffice with search)
 - [ ] Demonstrate the edit cycle
 - [ ] Add semantic versioning and document the triggers (semantic-release package github CI integration)
-- [ ] Create a pdf render of the documents (potentially will require separate code)
+- [x] Create a pdf render of the documents (potentially will require separate code)
 - [ ] Document the 'student' facing features in About 
 - [ ] Document the contribution guidelines in readme.md
 

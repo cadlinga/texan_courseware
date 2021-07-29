@@ -1,0 +1,104 @@
+# QC and build 
+name: QC and Build
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  quality_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check all .md files have trailing whitespace
+        run: echo find a script to confirm all .md files have trailing whitespace
+
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install dependencies
+        run: npm ci
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
+
+  create_and_send: 
+  runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        
+      - name: Install frontmatter, pandoc and LaTeX
+        run: sudo pip install python-frontmatter && sudo apt install pandoc && sudo apt-get install texlive-xetex
+               
+      - name: Create PDF 
+        run: | 
+            python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c
+            python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/flying' -c 
+      - run: |	
+          mkdir -p ${{ github.workspace }}/artifact
+          mv ${{ github.workspace }}/groundschool/book.pdf ${{ github.workspace }}/artifact/groundschool.pdf
+          mv ${{ github.workspace }}/flying/book.pdf ${{ github.workspace }}/artifact/flying.pdf
+        
+      - uses: actions/upload-artifact@v2
+        with:
+         name: PDFs
+         path: ${{ github.workspace }}/artifact/**/*       
+         
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # Required mail server address:
+          server_address: smtp.gmail.com
+          # Required mail server port:
+          server_port: 465
+          # Optional (recommended): mail server username:
+          username: ${{secrets.MAIL_USERNAME}}
+          # Optional (recommended) mail server password:
+          password: ${{secrets.MAIL_PASSWORD}}
+          # Required mail subject:
+          subject: New Courseware Release 
+          # Required recipients' addresses:
+          to: conneradlington+72student@gmail.com
+          # Required sender full name (address can be skipped):
+          from: 72(F) Sqn
+          # Optional whether this connection use TLS (default is true if server_port is 465)
+          secure: true
+          # Optional plain body:
+          body: A new set of courseware has been released.
+          # Optional HTML body read from file:
+          # html_body: file://README.html
+          # Optional carbon copy recipients:
+          # cc: kyloren@example.com,leia@example.com
+          # Optional blind carbon copy recipients:
+          # bcc: r2d2@example.com,hansolo@example.com
+          # Optional recipient of the email response:
+          # reply_to: luke@example.com
+          # Optional unsigned/invalid certificates allowance:
+          ignore_cert: true
+          # Optional converting Markdown to HTML (set content_type to text/html too):
+          # convert_markdown: true
+          # Optional attachments:
+          attachments: ${{ github.workspace }}/artifact/*.pdf
+          # Optional priority: 'high', 'normal' (default) or 'low'
+          priority: normal
+
+
