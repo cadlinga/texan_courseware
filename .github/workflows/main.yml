@@ -53,14 +53,14 @@ jobs:
           sudo apt-get install texlive-xetex
           
       - name: Add Version 
-        run: "echo -e '---\nauthor: ${{needs.generate_version_number.outputs.version}}\nlanguage: en-UK\n---' > {{$GITHUB_WORKSPACE}}/title.txt"
+        run: "echo -e '---\nauthor: Version ${{needs.generate_version_number.outputs.version}}\nlanguage: en-UK\n---' > $GITHUB_WORKSPACE/title.txt"
       - name: Create PDF 
         run: | 
             python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c
             python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/flying' -c 
       - run: |	
           mkdir -p ${{ github.workspace }}/artifact
-          mv ${{ github.workspace }}/groundschool/book.pdf ${{ github.workspace }}/artifact/groundschool.pdf
+          mv ${{ github.workspace }}/groundschool/book.pdf $github.workspace/artifact/groundschool.pdf
           mv ${{ github.workspace }}/flying/book.pdf ${{ github.workspace }}/artifact/flying.pdf
       - uses: actions/upload-artifact@v2
         with:
