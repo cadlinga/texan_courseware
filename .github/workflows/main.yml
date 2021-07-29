@@ -118,8 +118,8 @@ jobs:
     steps:
     
     - uses: actions/download-artifact@v2
-        with:
-          path: ~/artifacts/
+      with:
+        path: ~/artifacts/
     
     - name: Release
       uses: softprops/action-gh-release@v1
