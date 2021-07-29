@@ -4,9 +4,9 @@ title: Home
 nav_order: 1
 ---
 
-# [Latest Groundschool Manual](https://github.com/cadlinga/texan_courseware/releases/latest/groundschool.pdf)
+# [Latest Groundschool Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/groundschool.pdf)
 
-# [Latest Flying Manual](https://github.com/cadlinga/texan_courseware/releases/latest/flying.pdf)
+# [Latest Flying Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/flying.pdf)
 
 
 # Roadmap to the demo
