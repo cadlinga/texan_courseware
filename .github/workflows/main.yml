@@ -60,8 +60,8 @@ jobs:
             python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/flying' -c 
       - run: |	
           mkdir -p ${{ github.workspace }}/artifact
-          mv ${{ github.workspace }}/groundschool/book.pdf ${{ github.workspace }}/artifact/groundschool.pdf
-          mv ${{ github.workspace }}/flying/book.pdf ${{ github.workspace }}/artifact/flying.pdf
+          mv ${{ github.workspace }}/groundschool/book.pdf ${{ github.workspace }}/artifact/groundschool-${{needs.generate_version_number.outputs.version}}.pdf
+          mv ${{ github.workspace }}/flying/book.pdf ${{ github.workspace }}/artifact/flying-${{needs.generate_version_number.outputs.version}}.pdf
       - uses: actions/upload-artifact@v2
         with:
           name: PDFs
