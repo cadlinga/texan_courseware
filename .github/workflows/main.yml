@@ -58,13 +58,13 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:
-          server_address: smtp.gmail.com
+          server_address: smtp.mailtrap.io
           # Required mail server port:
-          server_port: 465
+          server_port: 2525
           # Optional (recommended): mail server username:
-          username: ${{secrets.MAIL_USERNAME}}
+          username: 1cd7d3138a7713
           # Optional (recommended) mail server password:
-          password: ${{secrets.MAIL_PASSWORD}}
+          password: 12e3d9b8934391
           # Required mail subject:
           subject: New Courseware Release 
           # Required recipients' addresses:
