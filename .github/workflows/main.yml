@@ -17,18 +17,6 @@ jobs:
       - name: Check all .md files have trailing whitespace
         run: echo find a script to confirm all .md files have trailing whitespace
 
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    steps:
-        - uses: "marvinpinto/action-automatic-releases@latest"
-          with:
-            repo_token: "${{ secrets.GITHUB_TOKEN }}"
-            automatic_release_tag: "latest"
-            prerelease: false
-            title: "v0.0.1"
-
-
   create_and_send: 
     runs-on: ubuntu-latest
 
@@ -91,5 +79,24 @@ jobs:
           attachments: ${{ github.workspace }}/artifact/*.pdf
           # Optional priority: 'high', 'normal' (default) or 'low'
           priority: normal
-
+  release:
+#     name: Release
+#     runs-on: ubuntu-latest
+#     steps:
+#         - uses: "marvinpinto/action-automatic-releases@latest"
+#           with:
+#             repo_token: "${{ secrets.GITHUB_TOKEN }}"
+#             automatic_release_tag: "latest"
+#             prerelease: false
+#             title: "v0.0.1"
+      name: Release
+      runs-on: ubuntu-latest
+      steps:
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: v0.0.2
+          files: |
+            ${{ github.workspace }}/artifact/groundschool.pdf
+            ${{ github.workspace }}/artifact/flying.pdf
 
