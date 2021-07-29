@@ -3,10 +3,11 @@ layout: default
 title: Home
 nav_order: 1
 ---
+# Prefer to work with a PDF? 
 
-# [Latest Groundschool Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/groundschool.pdf)
+## [Download Latest Groundschool Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/groundschool.pdf)
 
-# [Latest Flying Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/flying.pdf)
+## [Download Latest Flying Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/flying.pdf)
 
 
 # Roadmap to the demo
@@ -16,10 +17,11 @@ nav_order: 1
 - [x] Figure out search function
 - [x] ~~Include a table of contents~~ (side bar nav will suffice with search)
 - [ ] Demonstrate the edit cycle
-- [ ] Add semantic versioning and document the triggers (semantic-release package github CI integration)
+- [x] Add semantic versioning and document the triggers (semantic-release package github CI integration)
 - [x] Create a pdf render of the documents (potentially will require separate code)
 - [ ] Document the 'student' facing features in About 
 - [ ] Document the contribution guidelines in readme.md
+- [ ] Create a markdown email template for the new version email
 
 ## PDF generation 
 Currently it looks like the best option will be to use [this custom python code](https://github.com/catmorbid/markdown-book) but adapting it so that it orders the book using meta data instead of a number at the end of the file names... 
