@@ -124,5 +124,5 @@ jobs:
       with:
         name: ${{ needs.create_pdfs.outputs.version }}
         tag_name: ${{ needs.create_pdfs.outputs.version }}
-        files: artifacts/groundschool.pdf, artifacts/flying.pdf
+        files: artifacts/**/*.pdf
     
