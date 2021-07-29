@@ -42,6 +42,8 @@ jobs:
   create_pdfs:
     runs-on: ubuntu-latest
     needs: generate_version_number
+    outputs:
+      version: ${{ needs.generate_version_number.output.version }}
     steps:
       - uses: actions/checkout@v2
       - name: Install frontmatter, pandoc and LaTeX
@@ -81,7 +83,7 @@ jobs:
           server_port: 587
           username: 1cd7d3138a7713
           password: 12e3d9b8934391
-          subject: Courseware Version ${{ jobs.generate_version_number.output.version }} Released
+          subject: Courseware Version ${{ needs.create_pdfs.outputs.version }} Released
           to: conneradlington+72student@gmail.com
           from: 72(F) Sqn
           # Optional whether this connection use TLS (default is true if server_port is 465)
@@ -117,7 +119,7 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        name: ${{ jobs.generate_version_number.output.version }}
-        tag_name: ${{ jobs.generate_version_number.outputs.version }}
+        name: ${{ needs.create_pdfs.outputs.version }}
+        tag_name: ${{ needs.create_pdfs.outputs.version }}
         files: artifacts/*.pdf
     
