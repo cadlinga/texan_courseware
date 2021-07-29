@@ -37,7 +37,7 @@ jobs:
           major_pattern: "(MAJOR)"
           minor_pattern: "(MINOR)"
           format: "${major}.${minor}.${patch}"
-          bump_each_commit: false
+          bump_each_commit: true
 
   create_pdfs:
     runs-on: ubuntu-latest
