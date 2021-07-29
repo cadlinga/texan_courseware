@@ -97,9 +97,9 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: v0.0.2
+          name: v0.0.3
           tag_name: latest
-          files: |
-            ${{ github.workspace }}/artifact/groundschool.pdf
-            ${{ github.workspace }}/artifact/flying.pdf
+#           files: |
+#             ${{ github.workspace }}/artifact/groundschool.pdf
+#             ${{ github.workspace }}/artifact/flying.pdf
 
