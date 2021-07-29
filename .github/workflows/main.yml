@@ -99,7 +99,7 @@ jobs:
         with:
           name: v0.3.3
           tag_name: v0.3.3
-          draft: true
+#          draft: true
 #           files: |
 #             ${{ github.workspace }}/artifact/groundschool.pdf
 #             ${{ github.workspace }}/artifact/flying.pdf
