@@ -19,25 +19,25 @@ jobs:
       - name: Check all .md files have trailing whitespace
         run: echo find a script to confirm all .md files have trailing whitespace
 
-#   create_and_send: 
-#     runs-on: ubuntu-latest
+  create_and_send: 
+    runs-on: ubuntu-latest
 
-#     # Steps represent a sequence of tasks that will be executed as part of the job
-#     steps:
-#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - uses: actions/checkout@v2
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
         
-#       - name: Install frontmatter, pandoc and LaTeX
-#         run: sudo pip install python-frontmatter && sudo apt install pandoc && sudo apt-get install texlive-xetex
+      - name: Install frontmatter, pandoc and LaTeX
+        run: sudo pip install python-frontmatter && sudo apt install pandoc && sudo apt-get install texlive-xetex
                
-#       - name: Create PDF 
-#         run: | 
-#             python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c
-#             python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/flying' -c 
-#       - run: |	
-#           mkdir -p ${{ github.workspace }}/artifact
-#           mv ${{ github.workspace }}/groundschool/book.pdf ${{ github.workspace }}/artifact/groundschool.pdf
-#           mv ${{ github.workspace }}/flying/book.pdf ${{ github.workspace }}/artifact/flying.pdf
+      - name: Create PDF 
+        run: | 
+            python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/groundschool' -c
+            python3 $GITHUB_WORKSPACE'/export_book.py' -p $GITHUB_WORKSPACE'/flying' -c 
+      - run: |	
+          mkdir -p ${{ github.workspace }}/artifact
+          mv ${{ github.workspace }}/groundschool/book.pdf ${{ github.workspace }}/artifact/groundschool.pdf
+          mv ${{ github.workspace }}/flying/book.pdf ${{ github.workspace }}/artifact/flying.pdf
         
 #       - uses: actions/upload-artifact@v2
 #         with:
@@ -84,15 +84,7 @@ jobs:
           
           
   release:
-#     name: Release
-#     runs-on: ubuntu-latest
-#     steps:
-#         - uses: "marvinpinto/action-automatic-releases@latest"
-#           with:
-#             repo_token: "${{ secrets.GITHUB_TOKEN }}"
-#             automatic_release_tag: "latest"
-#             prerelease: false
-#             title: "v0.0.1"
+
       name: Release
       runs-on: ubuntu-latest
       steps:
@@ -113,7 +105,7 @@ jobs:
           # Same as above except indicating a minor change, supports regular expressions wrapped with '/'
           minor_pattern: "(MINOR)"
           # A string to determine the format of the version output
-          format: "${major}.${minor}.${patch}-prerelease${increment}"
+          format: "${major}.${minor}.${patch}"
           # Optional path to check for changes. If any changes are detected in the path the
           # 'changed' output will true. Enter multiple paths separated by spaces.
           # change_path: "src/my-service"
@@ -131,10 +123,9 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: $version
-          tag_name: $version
+          name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ steps.version.outputs.version }}
 #          draft: true
-#           files: |
-#             ${{ github.workspace }}/artifact/groundschool.pdf
-#             ${{ github.workspace }}/artifact/flying.pdf
+          files: |
+            ${{ github.workspace }}/artifact/*.pdf
 
