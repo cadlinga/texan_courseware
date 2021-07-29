@@ -125,7 +125,7 @@ jobs:
           bump_each_commit: false
 
       - name: Variable Finding
-        run: echo {{ steps }}
+        run: echo ${{ steps.version.version }}
 
       - name: Release
         uses: softprops/action-gh-release@v1
