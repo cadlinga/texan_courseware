@@ -68,11 +68,11 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          path: ~/artifacts/
+          path: artifacts/
           
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: ~/artifacts/
+        working-directory: artifacts/
         
 #      - name: Send mail
 #         uses: dawidd6/action-send-mail@v3
@@ -119,14 +119,14 @@ jobs:
     
     - uses: actions/download-artifact@v2
       with:
-        path: ~/artifacts/
+        path: artifacts/
     
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
         name: ${{ needs.generate_version_number.output.version }}
         tag_name: ${{ needs.generate_version_number.output.version }}
-        files: ~/artifacts/*.pdf
+        files: artifacts/*.pdf
     
       
 #   create_and_send: 
