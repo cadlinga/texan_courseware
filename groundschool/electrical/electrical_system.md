@@ -8,13 +8,13 @@ parent: Electrical System and Lighting
 
 ## Electrical System
 
-The aux bat is an aux bat. 
-
 ### Battery
 
 The aircraft has a 24 Vdc 48 Ah battery in the engine bay, aft, port side. It is a lead-acid battery, fully aerobatic and is permanently connected tothe HOT BAT BUS.
 
 Switching on the BAT MASTER switch in either cockpit connects the battery to the Battery Busbars and, via the BUS TIE switch, to the Generator Busbars (with the exception of the HOT GEN BUS).
+
+![Battery](battery.png "Battery")
 
 If the front cockpit battery switch is ON, then the rear cockpit switch will be at the OFF position (ie, both switches cannot be ON at the same time). If the rear cockpit switch is now placed to the ON position, it will take control of the battery and then magnetically de-latch the switch inthe front cockpit and vice versa. This is so that control of the battery can be transferred between cockpits without any power interruption.
 
