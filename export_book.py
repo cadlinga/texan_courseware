@@ -11,7 +11,6 @@ def run_cmd(cmd):
 	return output.decode('utf-8')
 
 def sort_list(a_list):
-    print(a_list)
     list_with_indeces = []
     for item in a_list:
         index = re.sub("[^0-9]", "", item)
@@ -66,7 +65,6 @@ def get_list_of_files(path, extension, chapter_folders=False):
                     chapter_markdown_files.append(a_file)
             # chapter_markdown_files = sort_list(chapter_markdown_files)
             chapter_markdown_files = sort_file_list(chapter_markdown_files, chapter, path)
-            print(chapter_markdown_files)
             # chapter_markdown_files = sort_chapter_list(chapter_markdown_files, path)
             for index in range(len(chapter_markdown_files)):
                 current_path = chapter_markdown_files[index]
@@ -113,7 +111,9 @@ def main():
     if args.root_path[-1] != '/' or args.root_path[-1] != '\\':
         args.root_path = args.root_path + '/'
 
-    default_pandoc_cmd = 'pandoc --pdf-engine=xelatex --toc -o' + args.root_path +'book.pdf title.txt '
+    resource_path = os.path.dirname(os.path.dirname(args.root_path))
+
+    default_pandoc_cmd = 'pandoc -f markdown+rebase_relative_paths+implicit_figures  --resource-path=. -V="table-use-row-colors" -V="book" -V="fontsize:10" --top-level-division=chapter -V="classoption=oneside"  --pdf-engine=xelatex --toc -o' + args.root_path +'book.pdf title.txt'
     files_string = " ".join(file_list)
     run_cmd(default_pandoc_cmd + files_string)
 
