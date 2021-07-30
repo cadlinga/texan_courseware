@@ -8,5 +8,4 @@ parent: Ground School
 
 # Crew Alerting System
 
-The crew alerting system is super great.
-
+The Crew Alerting System alerts the crew when a monitored system changes operational state.
