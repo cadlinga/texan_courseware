@@ -20,7 +20,7 @@ jobs:
           server_port: 587
           username: 1cd7d3138a7713
           password: 12e3d9b8934391
-          subject: Courseware Version ${{ needs.create_pdfs.outputs.version }} Released
+          subject: Courseware Version
           to: conneradlington+72student@gmail.com
           from: 72(F) Sqn
           # Optional whether this connection use TLS (default is true if server_port is 465)
@@ -28,7 +28,7 @@ jobs:
           # Optional plain body:
           body: A new set of courseware has been released.
           # Optional HTML body read from file:
-          html_body: file://$GITHUB_WORKSPACE/email.md
+          html_body: file://{{ github.workspace}}/email.md
           # Optional carbon copy recipients:
           # cc: kyloren@example.com,leia@example.com
           # Optional blind carbon copy recipients:
