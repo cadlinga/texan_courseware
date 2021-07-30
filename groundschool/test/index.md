@@ -119,13 +119,6 @@ end
 - [ ] Hello, this is another TODO item
 - [x] Goodbye, this item is done
 
-### Small image
-
-
-### Large image
-
-
-
 ### Definition lists can be used with HTML syntax.
 
 <dl>
@@ -178,3 +171,5 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 The final element.
 ```
  ![Crest](72-crest.png "Crest")
+ 
+ 
