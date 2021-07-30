@@ -82,7 +82,7 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: artifacts/
-        
+      - uses: actions/checkout@v2
       - name: Send the email
         uses: dawidd6/action-send-mail@v3
         with:
