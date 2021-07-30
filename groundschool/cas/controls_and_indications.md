@@ -46,14 +46,14 @@ Green messages indicatethe condition of certain systems:
 
 ### Aural Tones 
 
-| Purpose                           | Tone Description  |
-|:----------------------------------|:------------------|
-| Landing gear position warning     | good swedish fish | 
-| Overspeed (Vmo/Mmo exceeded)      | good and plenty   | 
-| Master warn, master caution, fire | good `oreos`      | 
-| Over G warning                    | good `zoute` drop | 
-| Altitude warning                  | good              |
-| Bingo fuel                        | good              |
+| Purpose                           | Tone Description                     |
+|:----------------------------------|-------------------------------------:|
+| Landing gear position warning     | 250 Hz tone, 5 times per second      | 
+| Overspeed (Vmo/Mmo exceeded)      | 1600 Hz tone, 5 times per second     | 
+| Master warn, master caution, fire | Decaying tone                        | 
+| Over G warning                    | Swept frequency tone                 | 
+| Altitude warning                  | Voice "Altitude, altitude, altitude" |
+| Bingo fuel                        | Voice "Bingo, bingo"                 |
 
 ### System Test
 
