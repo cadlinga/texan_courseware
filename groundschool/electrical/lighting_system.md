@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lighting System
-nav_order: 1
+nav_order: 2
 grand_parent: Ground School
 parent: Electrical System and Lighting
 ---

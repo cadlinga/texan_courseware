@@ -18,6 +18,9 @@ Red warning alerts indicate hazardous conditions that require immediate attentio
 * Danger
 * Out of range conditions/Exceedance
 
+![](./../../images/warnings.png "Warnings")
+
+
 ### Cautions 
 
 Amber caution alerts indicate marginal conditions where intervention or a change of plan may be required:
@@ -28,6 +31,8 @@ Amber caution alerts indicate marginal conditions where intervention or a change
 * Invalid data
 * Traffic alerts (TFC) from TCAS
 
+![](./../../images/cautions.png "Cautions")
+
 ### System Status
 
 White messages identify the status of certain systems:
@@ -36,6 +41,8 @@ White messages identify the status of certain systems:
 * GPS/IRS initialising
 * Rear cockpit MFDs are repeating front cockpit information
 
+![](./../../images/system_status.png "System Status")
+
 ### System Advisories
 
 Green messages indicatethe condition of certain systems:
@@ -43,6 +50,9 @@ Green messages indicatethe condition of certain systems:
 * Nosewheel steering on
 * Ignition is active
 * Probes anti-ice heating on
+
+![](./../../images/system_advisories.png "System Advisories")
+
 
 ### Aural Tones 
 
@@ -60,4 +70,7 @@ Green messages indicatethe condition of certain systems:
 A System/Lamps Test panel is located behindthe throttle on the LH console in each cockpit:
 
 Lamps, master warning, master caution, fire detection circuits and annunciators along with all aural tones can be tested from this panel.
+
+![](./../../images/system_test.png "System Test")
+
 
