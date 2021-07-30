@@ -8,44 +8,7 @@ on:
 
 
 jobs:
-
-  test_email:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Send the email
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.mailtrap.io
-          server_port: 587
-          username: 1cd7d3138a7713
-          password: 12e3d9b8934391
-          subject: Courseware Version
-          to: conneradlington+72student@gmail.com
-          from: 72(F) Sqn
-          # Optional whether this connection use TLS (default is true if server_port is 465)
-          # secure: true
-          # Optional plain body:
-          body: A new set of courseware has been released.
-          # Optional HTML body read from file:
-          html_body: file://email.md
-          # Optional carbon copy recipients:
-          # cc: kyloren@example.com,leia@example.com
-          # Optional blind carbon copy recipients:
-          # bcc: r2d2@example.com,hansolo@example.com
-          # Optional recipient of the email response:
-          # reply_to: luke@example.com
-          # Optional unsigned/invalid certificates allowance:
-          # ignore_cert: true
-          # Optional converting Markdown to HTML (set content_type to text/html too):
-          convert_markdown: true
-          # Optional attachments:
-          # attachments: artifacts/**/*.pdf
-          # Optional priority: 'high', 'normal' (default) or 'low'
-          priority: normal
-       
-
-
+   
   quality_check:
     runs-on: ubuntu-latest
     steps:
@@ -135,7 +98,7 @@ jobs:
           # Optional plain body:
           body: A new set of courseware has been released.
           # Optional HTML body read from file:
-          html_body: email.md
+          html_body: file://email.md
           # Optional carbon copy recipients:
           # cc: kyloren@example.com,leia@example.com
           # Optional blind carbon copy recipients:
