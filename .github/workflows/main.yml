@@ -28,7 +28,7 @@ jobs:
           # Optional plain body:
           body: A new set of courseware has been released.
           # Optional HTML body read from file:
-          html_body: 'file://{{ github.workspace}}/email.md'
+          html_body: email.md
           # Optional carbon copy recipients:
           # cc: kyloren@example.com,leia@example.com
           # Optional blind carbon copy recipients:
