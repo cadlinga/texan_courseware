@@ -113,7 +113,7 @@ def main():
 
     resource_path = os.path.dirname(os.path.dirname(args.root_path))
 
-    default_pandoc_cmd = 'pandoc  --top-level-division=chapter -V="classoption=oneside"  --pdf-engine=xelatex --toc -o' + args.root_path +'book.pdf title.txt --css="epub.css'
+    default_pandoc_cmd = 'pandoc --resource-path=./groundschool/images:./groundschool/images/do_not_delete --top-level-division=chapter -V="classoption=oneside"  --pdf-engine=xelatex --toc -o' + args.root_path +'book.pdf title.txt --css="epub.css'
     files_string = " ".join(file_list)
     run_cmd(default_pandoc_cmd + files_string)
 

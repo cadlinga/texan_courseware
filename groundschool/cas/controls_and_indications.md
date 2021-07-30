@@ -45,7 +45,7 @@ White messages identify the status of certain systems:
 
 ### System Advisories
 
-Green messages indicatethe condition of certain systems:
+Green messages indicate the condition of certain systems:
 
 * Nosewheel steering on
 * Ignition is active
