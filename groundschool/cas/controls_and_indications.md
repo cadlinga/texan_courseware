@@ -60,3 +60,4 @@ Green messages indicatethe condition of certain systems:
 A System/Lamps Test panel is located behindthe throttle on the LH console in each cockpit:
 
 Lamps, master warning, master caution, fire detection circuits and annunciators along with all aural tones can be tested from this panel.
+
