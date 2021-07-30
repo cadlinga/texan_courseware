@@ -58,10 +58,10 @@ def main():
         for file in does_not_end_with_whitespace:
             print(file)
         print("\n\nFix these files before continuing...")
-        exit(0)
+        exit(1)
     else: 
         print(f"{bcolors.OKGREEN}All files end with at least one blank line! Well done.")
-        exit(1)
+        exit(0)
 
 if __name__ == "__main__":
     main()
