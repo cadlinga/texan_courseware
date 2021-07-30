@@ -18,7 +18,9 @@ jobs:
           fetch-depth: 0
       - name: Check all .md files have trailing whitespace
         run: |
+         echo "Checking Groundschool for whitespace..." 
          python3 $GITHUB_WORKSPACE'/whitespace.py' -p $GITHUB_WORKSPACE'/groundschool'
+         echo "Checking Flying for whitespace..." 
          python3 $GITHUB_WORKSPACE'/whitespace.py' -p $GITHUB_WORKSPACE'/flying'
       
   generate_version_number:
