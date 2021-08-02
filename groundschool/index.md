@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Ground School
-nav_order: 1000
+nav_order: 0
 has_children: true
 ---
 
