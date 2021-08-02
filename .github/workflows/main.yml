@@ -128,5 +128,5 @@ jobs:
       with:
         name: ${{ needs.create_pdfs.outputs.version }}
         tag_name: ${{ needs.create_pdfs.outputs.version }}
-        data: artifacts/**/*.pdf
+        files: artifacts/**/*.pdf
     
