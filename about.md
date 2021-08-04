@@ -55,7 +55,7 @@ The search will automatically index all of the markdown files when the website i
 ![](./../assets/images/comitting_to_main_is_blocked.png "Comitting to main to blocked")
 
 ## Creating A Feature Branch 
-
+![](./../assets/images/Branch_Demo.png "Branch Demo")
 ## Merging A Feature Branch (Pull Request)
 
 ## Automatic Quality Control 
