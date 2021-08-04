@@ -7,7 +7,7 @@ has_children: true
 
 # Flying Phase
 
-Everything you can expect from your first few weeks at 72(F) Sqn, primarily the technical section of groundschool is here. 
+Everything you can expect from the flying phase of 72(F) Sqn. 
 
 You can view this content in the web view [here](https://cadlinga.github.io/texan_courseware/flying/).
 

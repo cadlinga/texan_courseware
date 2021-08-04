@@ -20,19 +20,37 @@ The content has a 'breadcrumbed' navigation structure and all of the content is 
 
 ### Search Function
 
-The search will automatically index all of the markdown files when the website is published and the depth is currently set to sub headinng 
+The search will automatically index all of the markdown files when the website is published and the depth is currently set to sub heading, which means that the content within each page can be searched. 
 
 ![](./../assets/images/search.gif "System Status")
 
+For example, if you search the word "circuit" (above on large screens, or within the burger bar on mobile), you will see the granularity of the search. 
+
 ## PDF Documents 
 
+Whenever a release is generated (explained properly later), a script automatically compiles the markdown into pdf files, currently two different pdf documents 'groundschool' and 'flying', any amount of documents can be generated and the system can be very easily expanded. 
+
 ### Document Structure
+
+The pdf is generated using a typesetting tool called LaTeX, as a result, the pdf is 'properly formatted' and the document has a structure of chapters, sections and subsections. All of these will be parsed by a good pdf reader and become a navigatable tree alongside the document. Additionally, there is a table of contents with clickable links to all of the sections. 
+
+![](./../assets/images/document_structure.png "Document structure and contents page")
 
 
 * * * 
 
 
 # Semantic Versioning 
+
+This courseware will use semantic versioning to help make it clear to the users if they need to update their document set or not. The format of a semantic version is three digits, separated with dots `.`, sometimes prefixed with the letter `v`. This is in industry standard for versioning. 
+
+For example, `v0.2.32`. 
+
+The first digit represents the `major` version, if this digit is incremented, there have been breaking changes to the document. An example of such a breaking change could be a technique completely changing, or a limitation changing. If your document set is not at the current major version, some of the information in it is **incorrect**.
+
+The second digit represents the `minor` version, if this digit is incremented, there has been content added to the document but in a reverse compatible way. An example of such a change could be adding a new section to the flying manual, like a night flying section. If your document is not at the current minor version, the information in your document is correct but there is information **missing**. 
+
+The third digit represents the `patch` of the document. If this digit is incremented, there has been a patch update applied and none of the information has qualitatively changed. An example of such a change could be correcting spelling or punctuation errors or rewording a sentence for clarity. If your document is not at the current patch, the information in your document is **correct** and **complete** but perhaps not as clear or tidy as the most recent version. 
 
 # Releases
 
