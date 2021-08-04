@@ -53,15 +53,24 @@ The second digit represents the `minor` version, if this digit is incremented, t
 The third digit represents the `patch` of the document. If this digit is incremented, there has been a patch update applied and none of the information has qualitatively changed. An example of such a change could be correcting spelling or punctuation errors or rewording a sentence for clarity. If your document is not at the current patch, the information in your document is **correct** and **complete** but perhaps not as clear or tidy as the most recent version. 
 
 # Releases
+ 
+The courseware will have a release "*everytime** the patch digit of the semantic version increments. 
+
+A release is like a snapshot of the source documents. The releases for the courseware will simply be named after the semantic version which triggered the release. 
+
+Everytime a release is created, the source code of the courseware is compressed into a zip file and stored with the release. 
 
 ## Release Assets
 
+As well as a compressed version of the source code, we are free to associate any additional files to a given release, for the courseware we have chosen to associate the pdfs. This means that by viewing the releases in the GitHub repository, you can see the pdfs which were generated for every single version. 
+
 ## Persistent Links
 
-# Readback (getting historic versions)
+Each of the files associated with each release are available to download with a unique URL which includes the release version and the filename. Helpfully, there is a consistent URL for the files associated with the `latest` release. That means there is a link which, whenever it is clicked, will download the most recently released pdf versions of the courseware and the link **never** changes. 
 
 ## Release Comparison (differences)
 
+It is also possible to compare any two releases and see the changes which were made to the source files. This could be particularly useful for someone who has noticed the semantic version has been updated and wants to know exactly what has changed. GitHub shows this exceptionally clearly, displaying, file by file, lines which have been removed and lines which have been added. 
 
 * * * 
 
