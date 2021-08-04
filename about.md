@@ -69,4 +69,4 @@ The search will automatically index all of the markdown files when the website i
 
 
 # Email Notifications 
-![](./../assets/images/Email Demo.png "Email Demo")
+![](./../assets/images/Email_Demo.png "Email Demo")
