@@ -92,39 +92,70 @@ Every commit can be interrogated for more information, but the sum of all of the
 
 # Edit Cycle and Git
 
+The edit cycle using git uses branches and pull requests to allow multiple people to contribute to a set of documents in a collaberative way and makes merging all of the various changes from various contributors as simple as possible. 
+
+![](./../assets/images/Branch_Demo.png "Branch Demo")
+
 ## User Types and Permissions
-Owner - OC 72(F)Sqn, Ascent Chief Pilot, OC C Flight, Lead QI
 
-Maintainer - C Flight QFIs, Flight Commanders
+Owner - Single owner, admin permissions - held by Conner currently. 
 
-Member - All other members of 72(F)Sqn
+Maintainer - Admin like permissions, responsible for approving pull requests (checking the content submitted) - possibly held by OC 72(F), OC C Flt, Chief Pilot etc. 
+
+Member - All other people who need access to the courseware. They have read access to the 'Main' branch, can view releases, create a new branch or raise an issue. Nothing they can do without approval can compromise the documents. Comitting directly to Main is blocked (see below). 
 
 ![](./../assets/images/comitting_to_main_is_blocked.png "Comitting to main to blocked")
 
 ## Creating A Feature Branch 
-A "Branch" is a feature that allows users to make a copy of the Master document whilst editing an 'offline' version, anyone can create a Branch and submit changes via a "Pull Request" to be reviewed by an owner/maintainer.
 
-![](./../assets/images/Branch_Demo.png "Branch Demo")
+A `Branch` is a feature that allows users to make a copy of the Main document whilst editing an 'offline' version.
+
+Anyone can create a Branch and make as many edits as they like. It will never effect the main branch. 
+
+When ready, they can submit changes and request that they are merged into the main branch.
+
+### Automatic Quality Control 
+
+There are several automations applied (explained later), but all commits made to any branch is submitted to an automatic quality check, and the owner of that branch is told whether or not their edits have passed the quality check. If they do not meet the standard, there is feedback provided to help the contributor get up to the required quality.
+
+The green tick indicates that it has passed the quality check.
+
+![](./../assets/images/quality-control.png "Quality control")
+
 ## Merging A Feature Branch (Pull Request)
-If a repository owner/maintainer approves the "Pull Request" from the editor, the Master Document and Branch Document will be merged.
-## Automatic Quality Control 
+
+When a feature branch is ready and the contributor would like to submit their work to be merged into main, they do so with a pull reuqest. This can be done explicitly in the pull request menu, however, when working on a branch that is not Main, GitHub will often prompt and suggest you can submit a pull request. 
+
+![](./../assets/images/pull-request-prompt.png "GitHub prompt to create pull request")
+
+If a repository owner/maintainer approves the pull request from the contributor, the edits are applied to the main branch.
 
 ## Creating A Feature Branch
 
 ### Explicitly Creating A Branch
 
+![](./../assets/images/create-branch.png "Create a new branch")
+
 ### Creating A Branch At The Point Of Edit 
+
+![](./../assets/images/comitting_to_main_is_blocked.png "Comitting to main to blocked")
 
 ## Merging A Feature Branch (Pull Request)
 
+![](./../assets/images/create-ull-request.png "Explicitly creating pull request")
+
 ## Raising An Issue
 
-Any member of the repository can raise an issue and submit proposed changes, the issue sits will be reviewed by the owners/maintainers and dealt with accordingly.
+Any member of the repository can raise an issue which does not require them to suggest proposed changes. Once raised the issue is visible to everyone and anyone can suggest a solution. This could be as simple as commenting a solution, or creating a feature branch, fixing the problem and submitting a pull request, stating that the branch fixes the issue.
 
-An example of this would be if a 310 student finds an incorrect limitation in the Spinning courseware e.g. "at 100kts select and maintain Full Pro Spin controls", they would create a Branch, change the limitation (to 90kts) and commit changes, giving an explaination of the change they deem necessary, then submit a pull request (a request to merge their branch into Master document).
-The request would come through to an owner/maintainer (OC C Flt), who recognises the limitation is 90kts, they could accept the change and merge the branch, triggering an automatic document change and notification email. 
+![](./../assets/images/issue.png "A raised issue")
+
+An example of this would be if a 310 student finds an incorrect limitation in the Spinning courseware e.g. "at 100kts select and maintain Full Pro Spin controls", they simply raise the issue and it can be fixed by the community, or by the document maintainers. 
+
 ## Oversight and Audit
-Due to the nature of the branches and pull requests, no changes can be made and implemented by anyone other than owners or maintainers. All changes that are requested are presented in their entirety and compared with previous versions (Students could not slip rogue words or phrases into courseware and it be approved without anybody noticing).
+
+Due to the nature of the branches and pull requests, no changes can be made and implemented without being approved by one of the maintainers. All changes that are submitted and later approved are auditable in their entirety. Every line, in every file can be traced back to who wrote it and who approved it and when. This allows open contribution from everyone (QFIs, students, QIs etc) because due to the granularity, mischevious students or disgruntled staff could not slip rogue words or phrases into courseware without it being tracable to them and approved by a maintainer. 
+
 ### Viewing A Commit 
 
 ### Viewing Document History 
