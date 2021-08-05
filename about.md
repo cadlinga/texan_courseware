@@ -52,7 +52,7 @@ The third digit represents the `patch` of the document. If this digit is increme
 
 # Releases
  
-The courseware will have a release "*everytime** the patch digit of the semantic version increments. 
+The courseware will have a release **everytime** the patch digit of the semantic version increments. 
 
 A release is like a snapshot of the source documents. The releases for the courseware will simply be named after the semantic version which triggered the release.
 
