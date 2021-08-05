@@ -9,16 +9,8 @@ nav_order: 1
 
 ## [Download Latest Flying Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/flying.pdf)
 
+# Want to use the web verison? 
 
-# Roadmap to the demo
+## [Groundschool](https://cadlinga.github.io/texan_courseware/groundschool/)
 
-- [x] Create demo repository
-- [x] Render markdown documents using a Jekyll theme
-- [x] Figure out search function
-- [x] ~~Include a table of contents~~ (side bar nav will suffice with search)
-- [x] Add semantic versioning and document the triggers (semantic-release package github CI integration)
-- [x] Create a pdf render of the documents (potentially will require separate code)
-- [ ] Demonstrate the edit cycle
-- [ ] Document the 'student' facing features in About 
-- [ ] Document the contribution guidelines in readme.md
-- [ ] Create a markdown email template for the new version email
+## [Flying Phase](https://cadlinga.github.io/texan_courseware/flying/)

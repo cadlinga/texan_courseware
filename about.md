@@ -112,7 +112,20 @@ A `Branch` is a feature that allows users to make a copy of the Main document wh
 
 Anyone can create a Branch and make as many edits as they like. It will never effect the main branch. 
 
+### Explicitly Creating A Branch
+
+A branch can be explicitly created using the branch drop down: 
+
+![](./../assets/images/create-branch.png "Create a new branch")
+
+### Creating A Branch At The Point Of Edit 
+
+Alternatively, when editing a file, since main is restrcited, a branch can be created on the fly when editing a file. 
+
+![](./../assets/images/comitting_to_main_is_blocked.png "Comitting to main to blocked")
+
 When ready, they can submit changes and request that they are merged into the main branch.
+
 
 ### Automatic Quality Control 
 
@@ -124,25 +137,17 @@ The green tick indicates that it has passed the quality check.
 
 ## Merging A Feature Branch (Pull Request)
 
-When a feature branch is ready and the contributor would like to submit their work to be merged into main, they do so with a pull reuqest. This can be done explicitly in the pull request menu, however, when working on a branch that is not Main, GitHub will often prompt and suggest you can submit a pull request. 
+When a feature branch is ready and the contributor would like to submit their work to be merged into main, they do so with a pull reuqest. This can be done explicitly in the pull request menu. 
+
+![](./../assets/images/create-pull-request.png "Explicitly creating pull request")
+
+Alternatively, when working on a branch that is not Main, GitHub will often prompt and suggest you can submit a pull request. 
 
 ![](./../assets/images/pull-request-prompt.png "GitHub prompt to create pull request")
 
 If a repository owner/maintainer approves the pull request from the contributor, the edits are applied to the main branch.
 
-## Creating A Feature Branch
-
-### Explicitly Creating A Branch
-
-![](./../assets/images/create-branch.png "Create a new branch")
-
-### Creating A Branch At The Point Of Edit 
-
-![](./../assets/images/comitting_to_main_is_blocked.png "Comitting to main to blocked")
-
-## Merging A Feature Branch (Pull Request)
-
-![](./../assets/images/create-ull-request.png "Explicitly creating pull request")
+When approving, the maintainer may provide feedback to the branch owner, asking them to make changes before finally accepting the changes and merging into main. 
 
 ## Raising An Issue
 
@@ -156,9 +161,17 @@ An example of this would be if a 310 student finds an incorrect limitation in th
 
 Due to the nature of the branches and pull requests, no changes can be made and implemented without being approved by one of the maintainers. All changes that are submitted and later approved are auditable in their entirety. Every line, in every file can be traced back to who wrote it and who approved it and when. This allows open contribution from everyone (QFIs, students, QIs etc) because due to the granularity, mischevious students or disgruntled staff could not slip rogue words or phrases into courseware without it being tracable to them and approved by a maintainer. 
 
+### Viewing Document History 
+
+You can select any document in the repository and view the history of the document, this will display a list of commits, as well as their authors. 
+
+![](./../assets/images/view-history.png "Document History")
+
 ### Viewing A Commit 
 
-### Viewing Document History 
+Each of the commits can be inspected in further detail, where it will show which files were changed and exactly what changes were applied.
+
+![](./../assets/images/view-commit.png "Commit Details")
 
 * * * 
 
@@ -201,3 +214,17 @@ With a version number and pdf files to attach, the script then creates a new rel
 ## Email Notification 
 
 Finally, the email notification is automatically sent to the mailing list so that anyone who is subscribed to the document set is aware of the new release. 
+
+# Future Developmens 
+
+## Include EoTD
+
+## Include Sortie Briefs
+
+## Include Mass Briefs
+
+## Include Phase Guides 
+
+## Separate verisoning 
+
+Potentially separate each document set out to have its own version number. This will prevent the flying manual being major incremeneted due to changes to the ground school manual.
