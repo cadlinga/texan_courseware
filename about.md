@@ -36,9 +36,7 @@ The pdf is generated using a typesetting tool called LaTeX, as a result, the pdf
 
 ![](./../assets/images/document_structure.png "Document structure and contents page")
 
-
 * * * 
-
 
 # Semantic Versioning 
 
@@ -56,7 +54,9 @@ The third digit represents the `patch` of the document. If this digit is increme
  
 The courseware will have a release "*everytime** the patch digit of the semantic version increments. 
 
-A release is like a snapshot of the source documents. The releases for the courseware will simply be named after the semantic version which triggered the release. 
+A release is like a snapshot of the source documents. The releases for the courseware will simply be named after the semantic version which triggered the release.
+
+![](./../assets/images/release.png "GitHub Release")
 
 Everytime a release is created, the source code of the courseware is compressed into a zip file and stored with the release. 
 
@@ -68,9 +68,24 @@ As well as a compressed version of the source code, we are free to associate any
 
 Each of the files associated with each release are available to download with a unique URL which includes the release version and the filename. Helpfully, there is a consistent URL for the files associated with the `latest` release. That means there is a link which, whenever it is clicked, will download the most recently released pdf versions of the courseware and the link **never** changes. 
 
+### [Latest Groundschool Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/groundschool.pdf)
+
+### [Latest Flying Manual](https://github.com/cadlinga/texan_courseware/releases/latest/download/flying.pdf)
+
+
 ## Release Comparison (differences)
 
-It is also possible to compare any two releases and see the changes which were made to the source files. This could be particularly useful for someone who has noticed the semantic version has been updated and wants to know exactly what has changed. GitHub shows this exceptionally clearly, displaying, file by file, lines which have been removed and lines which have been added. 
+It is also possible to compare any two releases and see the changes which were made to the source files. This could be particularly useful for someone who has noticed the semantic version has been updated and wants to know exactly what has changed.
+
+![](./../assets/images/release_comparison_1.png "Selecting versions to compare")
+
+GitHub shows this exceptionally clearly, firstly showing a list of all of the commits taking one version to another. 
+
+![](./../assets/images/release_comparison_2.png "List of commits between versions")
+
+Every commit can be interrogated for more information, but the sum of all of their changes is then displayed for each file that has been changed. Anything highlighted in red has been removed, anything in green has been added. 
+
+![](./../assets/images/release_comparison_3.png "Sum of changes for each file")
 
 * * * 
 
@@ -119,17 +134,39 @@ Due to the nature of the branches and pull requests, no changes can be made and 
 
 # Email Notifications 
 When a Major or Minor change is made to the document sets, a notification email (similar to below) will be sent to all subscribers of the documents along with the most current versions of the documents.
+
 ![](./../assets/images/Email_Demo.png "Email Demo")
 
 * * *
 
 # Automation 
 
+To keep the deployment process consistent and timely, the process has been as automated as possible. Everytime a branch is merged into 'Main' (the master document source code), a deployment script is run which assures the quality of the files, calculates the semantic version number, creates the pdf files, generates a release (attaching the pdfs to the release) and sends the notification email. 
+
+![](./../assets/images/automation.png "Automatic Pipeline")
+
+Any push to the Main branch has all of the automations applied, any push to any other branch (a feautre branch) only has the quality control applied. 
+
 ## Quality Control 
+
+Currently, the quality control script checks for simple formatting of the markdown files, but this is very easily extended and could include things like spell check and syntax checking. 
+
+## Calculate Semantic Version
+
+The semantic version is automatically calculated. Every commit will 'bump' the patch number, but any commit which has `(MINOR)` in the commit message will bump the minor version and similarly, any commit with `(MAJOR)` will bump the major version. 
+
+The maintainer who is responsible for accepting pull requests from feature branches will be responsible for labelling the merge as `(MAJOR)`, `(MINOR)` or leaving it as a patch. 
+
+The automation then uses the commit message history to automatically generate the version number. 
 
 ## PDF Generation 
 
+With the version number, the pdf files are then generated and the version number is inserted on the cover page to make it easy to determine which version you have.  
+
 ## GitHub Release
+
+With a version number and pdf files to attach, the script then creates a new release, taking a snapshot of the source files and attaching the pdf files. This release now becomes the `latest` release and the persistent links described earlier will now point at the pdf files of this release. 
 
 ## Email Notification 
 
+Finally, the email notification is automatically sent to the mailing list so that anyone who is subscribed to the document set is aware of the new release. 
