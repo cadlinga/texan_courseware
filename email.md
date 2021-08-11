@@ -5,11 +5,11 @@ search_exclude: true
 
 # Texan Courseware Has Been Updated 
 
-Once again the courseware has been updated 
+The Texan courseware has been updated again.
 
 * * * 
 
-As always you can find the latest versions at the links below 
+As usual you can find the latest versions at the links below:
 
 ### [Ground School](https://github.com/cadlinga/texan_courseware/releases/latest/download/groundschool.pdf)
 
