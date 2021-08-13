@@ -8,21 +8,24 @@ parent: Electrical System and Lighting
 
 ## Electrical System
 
-### Battery
+### Avionics
 
-The aircraft has a 24 Vdc 48 Ah battery in the engine bay, aft, port side. It is a lead-acid battery, fully aerobatic and is permanently connected tothe HOT BAT BUS.
-
-Switching on the BAT MASTER switch in either cockpit connects the battery to the Battery Busbars and, via the BUS TIE switch, to the Generator Busbars (with the exception of the HOT GEN BUS).
 
 ![](./../../images/battery.png "Battery")
 
-If the front cockpit battery switch is ON, then the rear cockpit switch will be at the OFF position (ie, both switches cannot be ON at the same time). If the rear cockpit switch is now placed to the ON position, it will take control of the battery and then magnetically de-latch the switch inthe front cockpit and vice versa. This is so that control of the battery can be transferred between cockpits without any power interruption.
+The T-6B fully integrated CMC or Flight Visions avionics system uses two powerful mission computers. Integrated navigation and mission data is displayed on the large, 25° Total Field of View (TFOV) Head-Up Display (HUD) and on three high-fidelity 5in x 7in multifunction displays (MFDs). Any one of the three MFDs can access the navigation and mission management pages for the avionics and training systems.
 
-During the INITIAL CHECKS in the FRCs, battery voltage is checked. If the voltage is less than 22V, then the BAT MASTER switch should be set to OFF and the aircraft placed U/S. If external power were to be applied, the charge rate would overheat the battery, causing an acid spillage in the engine bay.
+The Up-Front Control Panel (UFCP) provides central control of navigation, air-to-air and air-to-ground master modes from the front and rear cockpits. It also supports radio communication and navigation aid management, weapon selection and programming, waypoint management and designation of markpoints.
 
-Similarly, if the voltage is less than 23.5V, an internal battery start should not be attempted because, after the start, the battery would be below 22V and the battery would overheat when the generator was switched on. Starts should normally be carried out with an appropriate external power set.
+The Primary Flight Display (PFD) provides the controls and displays required to manage and present primary flight information to the pilots including attitude, airspeed, altitude and flight path direction.
 
-If the generator fails, the battery can power the battery busbars for about 30 minutes. Radio transmissions are a large current load and this may shorten the time available. If the BUS TIE is left at NORM, then the generator busbars will also be powered, but for an indeterminate, shorter period.
+The Tactical Situation Display (TSD) enhances situational awareness by presenting a scalable plan view of the key elements required for terminal, en route, area and tactical navigation.
+
+The colour digital moving map display (MAP) presents the aircraft’s relationship to the outside physical environment. It also provides key flight, navigation and tactical display of information to give the crew a high degree of situational awareness during flight.
+
+An Engine Instrument and Crew Alerting System (EICAS) provides aircraft and engine system information including status of the engine, propeller, hydraulic, fuel, trim and flap.
+
+The avionics suite also includes a data transfer system for navigation and operation planning and a digital video recorder for mission debrief.
 
 ### Starter/Generator 
 
