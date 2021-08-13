@@ -5,6 +5,7 @@ nav_order: 2
 grand_parent: Ground School
 parent: Electrical System and Lighting
 ---
+![](./../../images/Teeth_Texan.gif "2 Ship")
 
 ## Principles of Flight
 
